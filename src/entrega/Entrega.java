@@ -49,7 +49,7 @@ public class Entrega {
    * o `false` segons si la proposició donada és certa (suposau que l'univers és suficientment
    * petit com per utilitzar la força bruta)
    */
-  public static class Tema1 {
+  static class Tema1 {
     /*
      * És cert que ∀x,y. P(x,y) -> Q(x) ^ R(y) ?
      */
@@ -200,7 +200,7 @@ public class Entrega {
    * int[] b, i un objecte de tipus Function<Integer, Integer> que podeu avaluar com f.apply(x) (on
    * x és un enter d'a i el resultat f.apply(x) és un enter de b).
    */
-  public static class Tema2 {
+  static class Tema2 {
     /*
      * És `p` una partició d'`a`?
      *
@@ -379,7 +379,7 @@ public class Entrega {
    * Aquí teniu els exercicis del Tema 3 (Aritmètica).
    *
    */
-  public static class Tema3 {
+  static class Tema3 {
     /*
      * Donat `a`, `b` retornau el màxim comú divisor entre `a` i `b`.
      *
@@ -438,7 +438,7 @@ public class Entrega {
     }
   }
 
-  public static class Tema4 {
+  static class Tema4 {
     /*
      * Donada una matriu d'adjacencia `A` d'un graf no dirigit, retornau l'ordre i la mida del graf.
      */
