@@ -35,7 +35,7 @@ import java.util.Set;
  * les actualitzacions amb enunciats nous. Si no podeu visualitzar bé algun enunciat, assegurau-vos
  * que el vostre editor de texte estigui configurat amb codificació UTF-8.
  */
-public class Entrega {
+ class Entrega {
 /*
    * Aquí teniu els exercicis del Tema 1 (Lògica).
    *
