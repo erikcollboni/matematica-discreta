@@ -58,11 +58,11 @@ class Entrega {
         BiPredicate<Integer, Integer> p,
         Predicate<Integer> q,
         Predicate<Integer> r) {
-      boolean res;
-      res=true;
+        
       
       
-     for(int x=0; x<universe.length; x++){ 
+      boolean res = true;
+      for(int x=0; x<universe.length; x++){ 
        for(int y=0; y<universe.length; y++){   
           res= res && (!p.test(universe[x],universe[y]) || ((q.test(universe[x]) && r.test(universe[y])));
        }
@@ -77,7 +77,20 @@ class Entrega {
      * És cert que ∃!x. ∀y. Q(y) -> P(x) ?
      */
     static boolean exercici2(int[] universe, Predicate<Integer> p, Predicate<Integer> q) {
-      return false; // TO DO
+      boolean res = true;
+      int contador_x = 0;
+      for ( int x : universe){
+        for ( int y :universe){
+          res = res && (!q.test(y) || p.test(x));
+        }
+        if(res == true){
+          contador_x++;
+        }
+        res = true;
+
+      }
+      
+      return res; // TO DO
     }
 
     /*
