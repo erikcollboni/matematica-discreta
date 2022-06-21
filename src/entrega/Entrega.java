@@ -89,6 +89,11 @@ import java.util.Set;
         res = true;
 
       }
+      if(contador_x==1){
+          res=true;
+      }else{
+          res=false;
+      }
       
       return res; // TO DO
     }
