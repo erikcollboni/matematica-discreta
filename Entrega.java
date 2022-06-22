@@ -105,6 +105,45 @@ class Entrega {
      * que cada un d'ells està ordenat de menor a major.
      */
     static boolean exercici3(int[][] universe) {
+      
+      //para resolver el ejercicio miraremos si es cierto que ∀x. ∃y. ¬(y ⊆ x)
+      boolean encontrado=false;
+      boolean res=true;
+      boolean cierto=true;
+      for(int i:universe){
+       int[] x = new int[ universe[i].length];
+        
+       for(int a : universe[i].length){
+         x[a]=universe[i][a];
+       }
+        
+       for (int j:universe){
+         
+         int[] y = new int[universe[j].length];
+         for(int a:universe[j].length){
+           y[a]=universe[j][a];
+         }
+         
+         for(int a:y){
+           for(int b:x){
+             if(y[a]==x[b]){
+               encontrado=true;
+             }
+           }
+           res=res && encontrado;
+           encontrado=false;
+         }
+         
+         
+         
+         
+         
+       }
+        
+     
+      
+      
+         }
       return false; // TO DO
     }
 
