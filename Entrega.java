@@ -110,15 +110,16 @@ class Entrega {
       boolean encontrado=false;
       boolean res=true;
       boolean cierto=true;
+      int contador=0;
       for(int i:universe){
-       int[] x = new int[ universe[i].length];
+       int[] x = new int[universe[i].length];
         
        for(int a : universe[i].length){
          x[a]=universe[i][a];
        }
         
        for (int j:universe){
-         
+
          int[] y = new int[universe[j].length];
          for(int a:universe[j].length){
            y[a]=universe[j][a];
@@ -133,27 +134,36 @@ class Entrega {
            res=res && encontrado;
            encontrado=false;
          }
-         
          if(!res){
-            break;  
+           contador++;
+           break;
          }
+           
          
-         
-         
-       }
-        
-     
-      
-      
          }
-      return false; // TO DO
+         }
+     return(contador==universe.lenth);
     }
 
     /*
      * És cert que ∀x. ∃!y. x·y ≡ 1 (mod n) ?
      */
     static boolean exercici4(int[] universe, int n) {
-      return false; // TO DO
+      int contador=0;
+      boolean res=true;
+      for(int x:universe){
+        for(int y:universe){
+          if((universe[x]*universe[y])%n==1){
+            contador++;
+          }
+        }
+        res=res && (contador==1);
+        contador=0;
+        
+      }
+      
+      
+      return res; // TO DO
     }
 
     /*
@@ -254,7 +264,12 @@ class Entrega {
      * tant `a` com cada un dels elements de `p` està ordenat de menor a major.
      */
     static boolean exercici1(int[] a, int[][] p) {
-      return false; // TO DO
+      boolean res=true;
+      for(int[]aux : p){
+        res=res&&(Arrays.asList(p).containsAll(Arrays.asList(a));
+        
+      }
+      return res; // TO DO
     }
 
     /*
