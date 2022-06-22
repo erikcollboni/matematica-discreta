@@ -134,7 +134,9 @@ class Entrega {
            encontrado=false;
          }
          
-         
+         if(!res){
+            break;  
+         }
          
          
          
