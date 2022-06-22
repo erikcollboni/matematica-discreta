@@ -87,8 +87,13 @@ class Entrega {
           contador_x++;
         }
         res = true;
-
+         }
+      if(contador_x==1){
+          res=true;
+      }else{
+          res=false;
       }
+      
       
       return res; // TO DO
     }
